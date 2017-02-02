@@ -37,6 +37,10 @@ class InterfaceController: WKInterfaceController {
         
     }
     
+    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
+        print(rowIndex)
+    }
+    
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
