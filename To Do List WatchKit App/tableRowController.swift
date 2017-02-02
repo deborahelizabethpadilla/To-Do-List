@@ -11,4 +11,5 @@ import WatchKit
 
 class tableRowController: NSObject {
 
+    @IBOutlet var tableRowLabel: WKInterfaceLabel!
 }

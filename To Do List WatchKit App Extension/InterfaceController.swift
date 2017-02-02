@@ -12,6 +12,10 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
     
+    var toDoItems = [String]()
+    
+    @IBOutlet var table: WKInterfaceTable!
+    
     var defaults = UserDefaults(suiteName: "group.com.Deborah.toDoListAppGroup")
     
     override func awake(withContext context: Any?) {
@@ -19,8 +23,18 @@ class InterfaceController: WKInterfaceController {
         
         if defaults?.object(forKey: "toDoList") != nil {
             
-            print(defaults?.object(forKey: "toDoList")! as Any)
+            toDoItems = defaults?.object(forKey: "toDoList") as! [String]
         }
+        
+        table.setNumberOfRows(toDoItems.count, withRowType: "tableRowController")
+        
+        for (index, item) in toDoItems.enumerated() {
+            
+            let row = table.rowController(at: index) as! tableRowController
+            
+            row.tableRowLabel.setText(item)
+        }
+        
     }
     
     override func willActivate() {

@@ -17,11 +17,21 @@
                         <table alignment="left" id="Ked-1s-Zf1">
                             <items>
                                 <tableRow identifier="tableRowController" id="wQn-do-NJd" customClass="tableRowController" customModule="To_Do_List_WatchKit_App_Extension">
-                                    <group key="rootItem" width="1" alignment="left" id="XgU-pb-1vR"/>
+                                    <group key="rootItem" width="1" alignment="left" id="XgU-pb-1vR">
+                                        <items>
+                                            <label width="1" height="1" alignment="left" text="Label" id="oYJ-ug-Jzg"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="tableRowLabel" destination="oYJ-ug-Jzg" id="fWG-Zw-EI8"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="table" destination="Ked-1s-Zf1" id="Gmo-gb-bYo"/>
+                    </connections>
                 </controller>
             </objects>
         </scene>
