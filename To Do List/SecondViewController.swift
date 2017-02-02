@@ -17,11 +17,13 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func addItem(_ sender: AnyObject) {
         
-        toDoList.append(item.text!!)
+        toDoList.append(item.text!)
         
         item.text = ""
         
-        UserDefaults.standard.set(toDoList, forKey: "toDoList")
+        defaults?.set(toDoList, forKey: "toDoList")
+        
+        defaults?.synchronize()
         
     }
 

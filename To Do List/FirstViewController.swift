@@ -10,6 +10,8 @@ import UIKit
 
 var toDoList = [String]()
 
+var defaults = UserDefaults(suiteName: "group.com.Deborah.toDoListAppGroup")
+
 class FirstViewController: UIViewController, UITableViewDelegate {
     
     
@@ -20,9 +22,9 @@ class FirstViewController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if UserDefaults.standard.object(forKey: "toDoList") != nil {
+        if defaults?.standard.object(forKey: "toDoList") != nil {
         
-            toDoList = UserDefaults.standard.object(forKey: "toDoList") as! [String]!
+            toDoList = defaults?.object(forKey: "toDoList") as! [String]!
         }
         
     }
@@ -55,7 +57,9 @@ class FirstViewController: UIViewController, UITableViewDelegate {
             
             toDoList.remove(at: indexPath.row)
             
-            UserDefaults.standard.set(toDoList, forKey: "toDoList")
+            defaults?.set(toDoList, forKey: "toDoList")
+            
+            defaults?.synchronize()
             
             toDoListTable.reloadData()
         }

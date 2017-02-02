@@ -11,11 +11,16 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
-
+    
+    var defaults = UserDefaults(suiteName: "group.com.Deborah.toDoListAppGroup")
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        // Configure interface objects here.
+        if defaults?.object(forKey: "toDoList") != nil {
+            
+            print(defaults?.object(forKey: "toDoList")! as Any)
+        }
     }
     
     override func willActivate() {
