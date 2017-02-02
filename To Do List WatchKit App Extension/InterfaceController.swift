@@ -12,6 +12,18 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
     
+    func loadTableData() {
+        
+        table.setNumberOfRows(toDoItems.count, withRowType: "tableRowController")
+        
+        for (index, item) in toDoItems.enumerated() {
+            
+            let row = table.rowController(at: index) as! tableRowController
+            
+            row.tableRowLabel.setText(item)
+        }
+    }
+    
     var toDoItems = [String]()
     
     @IBOutlet var table: WKInterfaceTable!
@@ -26,19 +38,17 @@ class InterfaceController: WKInterfaceController {
             toDoItems = defaults?.object(forKey: "toDoList") as! [String]
         }
         
-        table.setNumberOfRows(toDoItems.count, withRowType: "tableRowController")
-        
-        for (index, item) in toDoItems.enumerated() {
-            
-            let row = table.rowController(at: index) as! tableRowController
-            
-            row.tableRowLabel.setText(item)
-        }
-        
+        loadTableData()
     }
     
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
-        print(rowIndex)
+        toDoItems.remove(at: rowIndex)
+        
+        defaults?.set(toDoItems, forKey: "toDoList")
+        
+        defaults?.synchronize()
+        
+        loadTableData()
     }
     
     override func willActivate() {

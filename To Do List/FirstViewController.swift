@@ -22,7 +22,7 @@ class FirstViewController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if defaults?.standard.object(forKey: "toDoList") != nil {
+        if defaults?.object(forKey: "toDoList") != nil {
         
             toDoList = defaults?.object(forKey: "toDoList") as! [String]!
         }
@@ -41,7 +41,7 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
+    private func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
         
