@@ -14,6 +14,8 @@
 		509A355B1E426A1600B9238D /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509A355A1E426A1600B9238D /* ExtensionDelegate.swift */; };
 		509A355D1E426A1600B9238D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 509A355C1E426A1600B9238D /* Assets.xcassets */; };
 		509A35611E426A1600B9238D /* To Do List WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 509A35471E426A1400B9238D /* To Do List WatchKit App.app */; };
+		509A356D1E42D10C00B9238D /* tableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509A356C1E42D10C00B9238D /* tableRowController.swift */; };
+		509A356E1E42D13D00B9238D /* tableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509A356C1E42D10C00B9238D /* tableRowController.swift */; };
 		C87EC9341A691C9D00653082 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87EC9331A691C9D00653082 /* AppDelegate.swift */; };
 		C87EC9361A691C9D00653082 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87EC9351A691C9D00653082 /* FirstViewController.swift */; };
 		C87EC9381A691C9D00653082 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87EC9371A691C9D00653082 /* SecondViewController.swift */; };
@@ -84,6 +86,7 @@
 		509A355E1E426A1600B9238D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		509A356A1E426A4000B9238D /* To Do List.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "To Do List.entitlements"; sourceTree = "<group>"; };
 		509A356B1E426AA400B9238D /* To Do List WatchKit App Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "To Do List WatchKit App Extension.entitlements"; sourceTree = "<group>"; };
+		509A356C1E42D10C00B9238D /* tableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = tableRowController.swift; path = "../To Do List WatchKit App/tableRowController.swift"; sourceTree = "<group>"; };
 		C87EC92E1A691C9D00653082 /* To Do List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To Do List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C87EC9321A691C9D00653082 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C87EC9331A691C9D00653082 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +140,7 @@
 			children = (
 				509A356B1E426AA400B9238D /* To Do List WatchKit App Extension.entitlements */,
 				509A35581E426A1600B9238D /* InterfaceController.swift */,
+				509A356C1E42D10C00B9238D /* tableRowController.swift */,
 				509A355A1E426A1600B9238D /* ExtensionDelegate.swift */,
 				509A355C1E426A1600B9238D /* Assets.xcassets */,
 				509A355E1E426A1600B9238D /* Info.plist */,
@@ -385,6 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				509A356E1E42D13D00B9238D /* tableRowController.swift in Sources */,
 				509A355B1E426A1600B9238D /* ExtensionDelegate.swift in Sources */,
 				509A35591E426A1600B9238D /* InterfaceController.swift in Sources */,
 			);
@@ -397,6 +402,7 @@
 				C87EC9381A691C9D00653082 /* SecondViewController.swift in Sources */,
 				C87EC9341A691C9D00653082 /* AppDelegate.swift in Sources */,
 				C87EC9361A691C9D00653082 /* FirstViewController.swift in Sources */,
+				509A356D1E42D10C00B9238D /* tableRowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
