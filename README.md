@@ -1,5 +1,7 @@
 # To-Do-List
 
+**Summary:**
+
 This watchOS application allows users to create a to-do-list, allowing users to keep track of their responsibilites.
 
 **The application offers the following features:**
